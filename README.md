@@ -4,13 +4,14 @@
 
 [![Paper](https://img.shields.io/badge/Paper-arxiv_2026-blue.svg)](#)
 [![DemoPage](https://img.shields.io/badge/DemoPage-WordVoice-yellow.svg)](https://xxh333.github.io/wordvoice-demo/)
-[![Pipeline](https://img.shields.io/badge/Pipeline-WordVoice--pipeline-blue.svg)](https://huggingface.co/datasets/XXH333/WordVoice-5A)
+[![Pipeline](https://img.shields.io/badge/Pipeline-WordVoice--pipeline-blue.svg)](https://github.com/XXH333/WordVoice-5A-Pipeline)
 [![Dataset](https://img.shields.io/badge/Dataset-WordVoice--5A-green.svg)](https://huggingface.co/datasets/XXH333/WordVoice-5A)
 [![Model](https://img.shields.io/badge/Model-WordVoice-red.svg)](https://huggingface.co/XXH333/WordVoice-base-0.5B)
 [![Python](https://img.shields.io/badge/Python-3.10-blue.svg)](https://www.python.org/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-**官方模型实现：基于 LLM 的字级别显式与解耦多维控制 TTS**
+![WordVoice Logo](./pic/wordvoice.png)
+**WordVoice 官方模型实现：基于 LLM 的字级别显式与解耦多维控制 TTS**
 
 </div>
 
