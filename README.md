@@ -68,13 +68,13 @@ cd WordVoice-main
 本项目使用 `pyproject.toml` 管理依赖项。请在项目根目录下运行以下命令进行自动安装：
 
 ```bash
-pip install -e .
+pip install -e . -i https://mirrors.aliyun.com/pypi/simple/ --trusted-host=mirrors.aliyun.com
 ```
-*⚠️ 注意 (PyTorch 安装提示)：我们的环境依赖 torch==2.3.1+cu121。如果上述命令在拉取 PyTorch 时提示找不到对应版本，请先手动指定源安装 PyTorch，然后再执行项目依赖安装：
+
+安装其他依赖项
 
 ```bash
-pip install torch==2.3.1 torchaudio==2.3.1 --index-url https://download.pytorch.org/whl/cu121
-pip install -e .
+pip install num2words==0.5.14 x_transformers==2.11.24
 ```
 
 ## 📥 下载预训练模型 (Download Models)
