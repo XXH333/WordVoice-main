@@ -59,8 +59,9 @@ conda activate wordvoice
 
 ### 2. 拷贝源码
 ```bash
-conda create -n wordvoice python=3.10 -y
-conda activate wordvoice
+git clone https://github.com/XXH333/WordVoice-main.git
+
+cd WordVoice-main
 ```
 
 ### 3. 安装依赖
