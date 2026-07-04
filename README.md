@@ -11,7 +11,7 @@
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 ![WordVoice Logo](./pic/wordvoice.png)
-**WordVoice 官方模型实现：基于 LLM 的字级别显式与解耦多维控制 TTS**
+**WordVoice 官方模型实现：基于 CosyVoice3 框架的字级别显式与解耦多维控制 TTS**
 
 </div>
 
