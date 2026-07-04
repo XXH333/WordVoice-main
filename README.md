@@ -36,7 +36,7 @@
 - 📈 **音调 (Tone)**：七大类韵律形态（平、升、强升、降、强降、峰、谷）
 
 ### 🧠 “声学思考”机制 (Acoustic Thinking via Bound-Token)
-在自回归（AR）语言模型中首创 `bound-token` ($\langle b \rangle$) 机制。模型在生成语音 token 前，会先显式预测该字的声学属性，实现“先规划韵律，再生成声音”的智能过程。
+在自回归（AR）语言模型中采用 `bound-token` ($\langle b \rangle$) 机制。模型在生成某个字对应的语音 token 前，会先显式预测该字的声学属性，实现“先规划韵律，再生成声音”的智能过程。
 
 ### 🎛️ 细粒度声学调制 (Fine-Grained Acoustic Modulation)
 在 Flow Matching (FM) 阶段，引入基于 LLM 的字级风格 token 上采样与细粒度条件调制模块，弥补了离散 token 带来的声学细节丢失，确保了极高的波形重建保真度与控制精度。
