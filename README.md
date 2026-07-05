@@ -238,7 +238,7 @@ Run the following script to automatically download [the WordVoice pre-trained mo
 ```bash
 bash download_models.sh
 ```
-*After running the `download_models.sh` script, the pre-trained model weights and dependencies (LLM backbone, Flow Matching weights, etc.) will be downloaded and saved in the `checkpoints/` folder by default. The code will load models from this path during inference or training.
+After running the `download_models.sh` script, the pre-trained model weights and dependencies (LLM backbone, Flow Matching weights, etc.) will be downloaded and saved in the `checkpoints/` folder by default. The code will load models from this path during inference or training.
 
 ## 🚀 Inference
 
@@ -247,7 +247,7 @@ We provide an out-of-the-box inference script. You can directly run the followin
 ```bash
 python wordvoice_infer.py
 ```
-*You can modify the input text, reference audio path, and manually specify word-level control parameters (e.g., duration or pitch of certain words) in `wordvoice_infer.py`. We also provide default inference samples within the script.
+You can modify the input text, reference audio path, and manually specify word-level control parameters (e.g., duration or pitch of certain words) in `wordvoice_infer.py`. We also provide default inference samples within the script.
 
 ---
 
