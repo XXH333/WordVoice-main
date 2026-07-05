@@ -258,7 +258,7 @@ The training entry script is located at:
 ```bash
 bash train_code/wordvoice/run_wordvoice.sh
 ```
-*Before running the training script, please ensure that you have completed data preprocessing and word-level acoustic feature extraction using our [WordVoice Data Pipeline](https://github.com/XXH333/WordVoice-5A-Pipeline), and have correctly configured the data paths and hyperparameters in the script.
+Before running the training script, please ensure that you have completed data preprocessing and word-level acoustic feature extraction using our [WordVoice Data Pipeline](https://github.com/XXH333/WordVoice-5A-Pipeline), and have correctly configured the data paths and hyperparameters in the script.
 
 ---
 
