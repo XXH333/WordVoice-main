@@ -17,6 +17,20 @@
 
 ---
 
+<div align="center">
+
+# 🌏 Language
+
+**🇨🇳 中文 | EN English**
+
+[跳转到中文](#cn-中文说明) ｜ [Jump to English](#en-english-demonstration)
+
+</div>
+
+---
+
+# 🇨🇳 中文说明
+
 ## 📖 简介 (Overview)
 
 **WordVoice** 是一个突破现有 LLM-TTS 粗粒度控制瓶颈的全新语音生成框架。它将传统的“隐式端到端生成”转化为“显式、高可控”的生成范式，特别适用于需要精准情感表达和严格时间对齐的场景（如：有声书配音、视频译制等）。
@@ -150,10 +164,146 @@ WordVoice 模型的实现建立在众多优秀的开源项目之上，特别感�
 
 如有任何问题、Bug 报告或合作意向，欢迎提交 Issue 或 Pull Request。
 
-<div align="center">
+<div align="right">
 
-**WordVoice Model**
+[⬆ 返回顶部](#WordVoice Model-)
 
-为大模型语音生成赋予精准的字级控制力。
+</div>
+
+---
+
+# EN English Demonstration
+
+## 📖 Overview
+
+**WordVoice** is a novel speech generation framework that breaks through the coarse-grained control bottleneck of existing LLM-TTS systems. It transforms the traditional "implicit end-to-end generation" into an "explicit, highly controllable" generation paradigm, which is particularly suitable for scenarios requiring precise emotional expression and strict temporal alignment (e.g., audiobook narration, video dubbing).
+
+This repository contains the **training** and **inference** code for the WordVoice model. Based on our open-source [WordVoice-5A Dataset](https://huggingface.co/datasets/XXH333/WordVoice-5A) and the linguistically-guided [Word-Level Attribute Annotation Pipeline](https://github.com/XXH333/WordVoice-5A-Pipeline), this model achieves precise and decoupled word-level control over **five acoustic dimensions** during speech generation.
+
+---
+
+## ✨ Features
+
+### 🎯 Explicit Word-Level Control
+Supports independent and decoupled control of five acoustic attributes for each input word:
+- ⏱️ **Duration**: Word-level pronunciation duration.
+- ⏸️ **Boundary**: 5-level pause classification (`b0`–`b4`).
+- 🔊 **Energy**: Word-level volume/loudness (`0`–`1`).
+- 🎵 **Pitch**: Word-level core fundamental frequency (`-1`–`1`).
+- 📈 **Tone**: 7 categories of prosodic morphologies (flat, rise, strong rise, fall, strong fall, peak, valley).
+
+### 🧠 "Acoustic Thinking" Mechanism via Bound-Token
+Employs a `bound-token` (<b\>) mechanism within the autoregressive (AR) language model. Before generating the speech tokens for a specific word, the model explicitly predicts its acoustic attributes, realizing an intelligent process of "planning prosody first, then generating sound."
+
+### 🎛️ Fine-Grained Acoustic Modulation
+In the Flow Matching (FM) stage, we introduce an LLM-based word-level style token upsampling and fine-grained conditional modulation module. This compensates for the loss of acoustic details caused by discrete tokens, ensuring extremely high waveform reconstruction fidelity and control precision.
+
+### 🔄 Dual Inference Modes
+- **Free Mode**: The LLM automatically performs multi-task prosodic planning to generate natural and fluent zero-shot speech.
+- **Control Mode**: Users can manually intervene and directly specify the acoustic attributes of a specific word (e.g., forcing a word to be prolonged, raising the pitch, etc.) to achieve highly deterministic stylistic intervention.
+---
+
+## 🛠️ Installation
+
+We recommend using **Conda** to manage your Python environment.
+
+### 1. Create and activate a virtual environment
+```bash
+conda create -n wordvoice python=3.10 -y
+conda activate wordvoice
+```
+
+### 2. Clone the repository
+```bash
+git clone https://github.com/XXH333/WordVoice-main.git
+
+cd WordVoice-main
+```
+
+### 3. Install dependencies
+This project uses `pyproject.toml` to manage dependencies. Please run the following command in the root directory for automatic installation:
+
+```bash
+pip install -e . -i https://mirrors.aliyun.com/pypi/simple/ --trusted-host=mirrors.aliyun.com
+```
+
+Install additional dependencies:
+
+```bash
+pip install num2words==0.5.14 x_transformers==2.11.24
+```
+
+## 📥 Download Models
+Run the following script to automatically download [the WordVoice pre-trained model weights](https://huggingface.co/XXH333/WordVoice-base-0.5B) and related dependent models (such as CosyVoice3, MMS-FA, etc.):
+```bash
+bash download_models.sh
+```
+*After running the `download_models.sh` script, the pre-trained model weights and dependencies (LLM backbone, Flow Matching weights, etc.) will be downloaded and saved in the `checkpoints/` folder by default. The code will load models from this path during inference or training.
+
+## 🚀 Inference
+
+We provide an out-of-the-box inference script. You can directly run the following command to experience both the **Free Mode** and **Control Mode** of WordVoice:
+
+```bash
+python wordvoice_infer.py
+```
+*You can modify the input text, reference audio path, and manually specify word-level control parameters (e.g., duration or pitch of certain words) in `wordvoice_infer.py`. We also provide default inference samples within the script.*
+---
+
+## 🏋️ Training
+
+If you wish to fine-tune or train WordVoice from scratch on your own dataset, we provide complete training scripts.
+The training entry script is located at:
+```bash
+bash train_code/wordvoice/run_wordvoice.sh
+```
+
+*Before running the training script, please ensure that you have completed data preprocessing and word-level acoustic feature extraction using our [WordVoice Data Pipeline](https://github.com/XXH333/WordVoice-5A-Pipeline), and have correctly configured the data paths and hyperparameters in the script.*
+---
+
+## 📚 Supported Languages
+
+| Language | Status |
+|-----------|--------|
+| Mandarin Chinese | ✅ |
+| English | ✅ |
+
+---
+
+## 📝 Citation
+
+If you use the code or models of this project in your research, please cite our paper:
+
+```bibtex
+@article{wordvoice2026,
+  title={WordVoice: Explicit and Decoupled Multi-Dimensional Word-Level Control for LLM-Based Text-to-Speech},
+  author={Anonymous},
+  journal={arXiv},
+  year={2027}
+}
+```
+
+---
+
+## 📄 License
+
+This project is open-sourced under the [MIT License](LICENSE). For more details, please refer to the LICENSE file.
+
+---
+
+## 🙏 Acknowledgements
+
+The implementation of the WordVoice model is built upon many excellent open-source projects. Special thanks to:
+- [CosyVoice3](https://github.com/FunAudioLLM/CosyVoice) / [Qwen2.5](https://github.com/QwenLM/Qwen2.5) for providing powerful backbone support.
+- And all the outstanding open-source Python libraries listed in `pyproject.toml`.
+---
+
+## 💬 Contact
+
+If you have any questions, bug reports, or collaboration intentions, please feel free to submit an Issue or Pull Request.
+
+<div align="right">
+
+[⬆ 返回顶部](#WordVoice Model-)
 
 </div>
