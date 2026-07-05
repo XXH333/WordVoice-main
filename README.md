@@ -247,7 +247,7 @@ We provide an out-of-the-box inference script. You can directly run the followin
 ```bash
 python wordvoice_infer.py
 ```
-*You can modify the input text, reference audio path, and manually specify word-level control parameters (e.g., duration or pitch of certain words) in `wordvoice_infer.py`. We also provide default inference samples within the script.*
+*You can modify the input text, reference audio path, and manually specify word-level control parameters (e.g., duration or pitch of certain words) in `wordvoice_infer.py`. We also provide default inference samples within the script.
 ---
 
 ## 🏋️ Training
@@ -258,7 +258,7 @@ The training entry script is located at:
 bash train_code/wordvoice/run_wordvoice.sh
 ```
 
-*Before running the training script, please ensure that you have completed data preprocessing and word-level acoustic feature extraction using our [WordVoice Data Pipeline](https://github.com/XXH333/WordVoice-5A-Pipeline), and have correctly configured the data paths and hyperparameters in the script.*
+*Before running the training script, please ensure that you have completed data preprocessing and word-level acoustic feature extraction using our [WordVoice Data Pipeline](https://github.com/XXH333/WordVoice-5A-Pipeline), and have correctly configured the data paths and hyperparameters in the script.
 ---
 
 ## 📚 Supported Languages
