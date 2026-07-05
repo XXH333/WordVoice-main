@@ -17,7 +17,7 @@ import torch
 import torchaudio
 import torchaudio.functional as F
 
-# 动态添加依赖路径 (建议在开源说明中提醒用户修改此处，或通过环境变量配置)
+# 动态添加依赖路径
 sys.path.append('CosyVoice/third_party/Matcha-TTS')
 sys.path.append('CosyVoice')
 sys.path.append('xxh_tools')
@@ -30,7 +30,7 @@ from zh_punc import chinese_text_normalization
 
 logging.basicConfig(level=logging.INFO)
 
-# 定义论文中提出的字级声学边界(Boundary)与音调(Tone)的分类体系
+# 定义字级声学边界(Boundary)与音调(Tone)的分类体系
 # Boundary: 5 levels (b0: continuous, b1: <=0.05s, b2: <=0.18s, b3: <=0.4s, b4: >0.4s)
 boundary_class = ['b0', 'b1', 'b2', 'b3', 'b4']
 # Tone: 7 morphologies
