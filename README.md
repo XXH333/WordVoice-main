@@ -33,7 +33,7 @@
 
 ## 📖 简介 (Overview)
 
-**WordVoice** 是一个突破现有 LLM-TTS 粗粒度控制瓶颈的全新语音生成框架。它将传统的“隐式端到端生成”转化为“显式、高可控”的生成范式，特别适用于需要精准情感表达和严格时间对齐的场景（如：有声书配音、视频译制等）。
+**WordVoice** 是一个突破现有 LLM-TTS 粗粒度控制瓶颈的全新语音生成框架。它将传统的“隐式端到端生成”转化为“显式、高可控”的生成范式，特别适用于需要精准情感表达和严格时间对齐的场景（如：有声书演绎、视频配音等）。
 
 本仓库包含了 WordVoice 模型的**训练**与**推理**代码。基于我们开源的 [WordVoice-5A 数据集](https://huggingface.co/datasets/XXH333/WordVoice-5A) 及语言学 [字级属性标注 Pipeline](https://github.com/XXH333/WordVoice-5A-Pipeline)，本模型实现了对语音生成过程中**五个声学维度**的字级别精准解耦控制。
 
@@ -50,7 +50,7 @@
 - 📈 **音调 (Tone)**：七大类韵律形态（平、升、强升、降、强降、峰、谷）
 
 ### 🧠 “声学思考”机制 (Acoustic Thinking via Bound-Token)
-在自回归（AR）语言模型中采用 `bound-token` ($\langle b \rangle$) 机制。模型在生成某个字对应的语音 token 前，会先显式预测该字的声学属性，实现“先规划韵律，再生成声音”的智能过程。
+在自回归（AR）语言模型中采用 `bound-token` ($\langle b \rangle$) 机制。模型在生成某个字对应的语音 token 前，会先显式预测该字的声学属性，实现“先规划韵律，再生成声音”的思考过程。
 
 ### 🎛️ 细粒度声学调制 (Fine-Grained Acoustic Modulation)
 在 Flow Matching (FM) 阶段，引入基于 LLM 的字级风格 token 上采样与细粒度条件调制模块，弥补了离散 token 带来的声学细节丢失，确保了极高的波形重建保真度与控制精度。
