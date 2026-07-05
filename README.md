@@ -23,13 +23,13 @@
 
 **🇨🇳 中文 | EN English**
 
-[跳转到中文](#中文说明) ｜ [Jump to English](#en-english-demonstration)
+[跳转到中文](#cn-zh) ｜ [Jump to English](#en-english-demonstration)
 
 </div>
 
 ---
 
-# 🇨🇳 中文说明
+# <span id="cn-zh">🇨🇳 中文说明</span>
 
 ## 📖 简介 (Overview)
 
