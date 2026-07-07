@@ -136,7 +136,11 @@ bash train_code/wordvoice/run_wordvoice.sh
 如果您在研究中使用了本项目的代码或模型，请引用我们的论文：
 
 ```bibtex
-@article{wordvoice2026,
+@article{nie2026wordvoice,
+  title={WordVoice: Explicit and Decoupled Multi-Dimensional Word-Level Control for LLM-Based TTS},
+  author={Sihang, Nie and Jinxin, Ji and Xiaofen, Xing and Deyi, Tuo and Chengbin, Jin and Jialong, Mai and Xiangmin, Xu},
+  journal={arXiv preprint arXiv:2607.},
+  year={2026}
 }
 ```
 
@@ -272,7 +276,11 @@ Before running the training script, please ensure that you have completed data p
 If you use the code or models of this project in your research, please cite our paper:
 
 ```bibtex
-@article{wordvoice2026,
+@article{nie2026wordvoice,
+  title={WordVoice: Explicit and Decoupled Multi-Dimensional Word-Level Control for LLM-Based TTS},
+  author={Sihang, Nie and Jinxin, Ji and Xiaofen, Xing and Deyi, Tuo and Chengbin, Jin and Jialong, Mai and Xiangmin, Xu},
+  journal={arXiv preprint arXiv:2607.},
+  year={2026}
 }
 ```
 
