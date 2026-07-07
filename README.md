@@ -146,11 +146,6 @@ bash train_code/wordvoice/run_wordvoice.sh
 
 ---
 
-## 📄 开源协议 (License)
-
-本项目基于 [MIT License](LICENSE) 开源。详细信息请参阅 LICENSE 文件。
-
----
 
 ## 🙏 致谢 (Acknowledgements)
 
@@ -286,11 +281,6 @@ If you use the code or models of this project in your research, please cite our 
 
 ---
 
-## 📄 License
-
-This project is open-sourced under the [MIT License](LICENSE). For more details, please refer to the LICENSE file.
-
----
 
 ## 🙏 Acknowledgements
 
