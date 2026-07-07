@@ -137,10 +137,6 @@ bash train_code/wordvoice/run_wordvoice.sh
 
 ```bibtex
 @article{wordvoice2026,
-  title={WordVoice: Explicit and Decoupled Multi-Dimensional Word-Level Control for LLM-Based Text-to-Speech},
-  author={Anonymous},
-  journal={arXiv},
-  year={2027}
 }
 ```
 
@@ -277,10 +273,6 @@ If you use the code or models of this project in your research, please cite our 
 
 ```bibtex
 @article{wordvoice2026,
-  title={WordVoice: Explicit and Decoupled Multi-Dimensional Word-Level Control for LLM-Based Text-to-Speech},
-  author={Anonymous},
-  journal={arXiv},
-  year={2027}
 }
 ```
 
