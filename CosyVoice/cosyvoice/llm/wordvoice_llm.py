@@ -685,7 +685,6 @@ class Qwen2LM(TransformerLM):
                 # 2. 提取当前步骤的隐藏状态，过分类器
                 hidden_state = inner_output[:, -1, :] # [1, D]
                 dur_pred_logits = self.duration_predictor(hidden_state) # [1, max_duration+1]
-                # pau_pred_logits = self.pause_predictor(hidden_state)    # [1, max_pause+1]
                 bnd_pred_logits = self.boundary_predictor(hidden_state)
                 tone_pred_logits = self.tone_predictor(hidden_state)
                 f0_pred_logits = self.f0_predictor(hidden_state)
@@ -693,7 +692,6 @@ class Qwen2LM(TransformerLM):
                 
                 # 取最大概率的值作为预测结果
                 pred_dur = dur_pred_logits.argmax(dim=-1).item()
-                # pred_pau = pau_pred_logits.argmax(dim=-1).item()
                 pred_bnd = bnd_pred_logits.argmax(dim=-1).item()
                 pred_tone = tone_pred_logits.argmax(dim=-1).item()
                 pred_f0 = f0_pred_logits.argmax(dim=-1).item()
@@ -708,7 +706,6 @@ class Qwen2LM(TransformerLM):
                 user_eng = eng_list[word_idx]
                 
                 final_dur = pred_dur if user_dur == self.max_duration else user_dur # xxh
-                # final_pau = pred_pau if user_pau == self.max_pause else user_pau # xxh
                 final_bnd = pred_bnd if user_bnd == self.max_boundary else user_bnd
                 final_tone = pred_tone if user_tone == self.max_tone else user_tone
                 final_f0 = pred_f0 if user_f0 == self.max_f0 else user_f0
@@ -720,9 +717,6 @@ class Qwen2LM(TransformerLM):
                     if user_eng == self.max_energy:
                         final_eng = max(final_eng, min(eng_list)) # 防止极端小声
 
-                # if word_idx == len(word_list)-1:
-                #     final_bnd=self.max_boundary-1
-
                 bnd_list[word_idx] = final_bnd
                 tone_list[word_idx] = final_tone
                 f0_list[word_idx] = final_f0
@@ -730,12 +724,10 @@ class Qwen2LM(TransformerLM):
 
                 # 安全截断
                 final_dur = min(max(final_dur, 0), self.max_duration - 1)
-                # final_pau = min(max(final_pau, 0), self.max_pause - 1)
                 
                 # 4. 动态组装 Style Embedding
                 w_emb = word_embs_list[word_idx]
                 d_emb = self.duration_embedding(torch.tensor([final_dur], device=device, dtype=torch.long)).view(-1)
-                # p_emb = self.pause_embedding(torch.tensor([final_pau], device=device, dtype=torch.long)).view(-1)
                 b_emb = self.boundary_embedding(torch.tensor([final_bnd], device=device, dtype=torch.long)).view(-1)
                 t_emb = self.tone_embedding(torch.tensor([final_tone], device=device, dtype=torch.long)).view(-1)
                 f_emb = self.f0_embedding(torch.tensor([final_f0], device=device, dtype=torch.long)).view(-1)
