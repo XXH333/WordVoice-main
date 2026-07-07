@@ -185,7 +185,7 @@ def main():
         executor.epoch = epoch
         train_dataset.set_epoch(epoch)
         dist.barrier()
-        # ▼▼▼ 2. 把传参里的 group_join 删掉，或者改成 None ▼▼▼
+
         executor.train_one_epoc(model, optimizer, scheduler, train_data_loader, cv_data_loader, writer, info_dict, scaler, None, ref_model=ref_model)
     
     # Start training loop
