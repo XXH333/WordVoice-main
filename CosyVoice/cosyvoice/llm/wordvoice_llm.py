@@ -755,7 +755,7 @@ class Qwen2LM(TransformerLM):
         
         return generate_speech_token, dur_list, bnd_list, tone_list, f0_list, eng_list, pau_list
 
-class CosyVoice3LM(Qwen2LM):
+class WordVoiceLM(Qwen2LM):
     def __init__(
             self,
             llm_input_size: int,
