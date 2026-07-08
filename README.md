@@ -2,13 +2,12 @@
 
 <div align="center">
 
-[![Paper](https://img.shields.io/badge/Paper-arxiv_2026-blue.svg)](#)
+[![Paper](https://img.shields.io/badge/Paper-arxiv_2026-blue.svg)](https://arxiv.org/abs/2607.06461)
 [![DemoPage](https://img.shields.io/badge/DemoPage-WordVoice-yellow.svg)](https://xxh333.github.io/wordvoice-demo/)
 [![Pipeline](https://img.shields.io/badge/Pipeline-WordVoice--pipeline-blue.svg)](https://github.com/XXH333/WordVoice-5A-Pipeline)
 [![Dataset](https://img.shields.io/badge/Dataset-WordVoice--5A-green.svg)](https://huggingface.co/datasets/XXH333/WordVoice-5A)
 [![Model](https://img.shields.io/badge/Model-WordVoice-red.svg)](https://huggingface.co/XXH333/WordVoice-base-0.5B)
 [![Python](https://img.shields.io/badge/Python-3.10-blue.svg)](https://www.python.org/)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 ![WordVoice Logo](./pic/wordvoice.png)
 **WordVoice 官方模型实现：基于 CosyVoice3 框架的字级别显式与解耦多维控制 TTS**
@@ -136,11 +135,14 @@ bash train_code/wordvoice/run_wordvoice.sh
 如果您在研究中使用了本项目的代码或模型，请引用我们的论文：
 
 ```bibtex
-@article{nie2026wordvoice,
-  title={WordVoice: Explicit and Decoupled Multi-Dimensional Word-Level Control for LLM-Based TTS},
-  author={Sihang, Nie and Jinxin, Ji and Xiaofen, Xing and Deyi, Tuo and Chengbin, Jin and Jialong, Mai and Xiangmin, Xu},
-  journal={arXiv preprint arXiv:2607.},
-  year={2026}
+@misc{nie2026wordvoice,
+      title={WordVoice: Explicit and Decoupled Multi-Dimensional Word-Level Control for LLM-Based TTS}, 
+      author={Sihang Nie and Jinxin Ji and Xiaofen Xing and Deyi Tuo and Chengbin Jin and Jialong Mai and Xiangmin Xu},
+      year={2026},
+      eprint={2607.06461},
+      archivePrefix={arXiv},
+      primaryClass={eess.AS},
+      url={https://arxiv.org/abs/2607.06461}, 
 }
 ```
 
@@ -271,11 +273,14 @@ Before running the training script, please ensure that you have completed data p
 If you use the code or models of this project in your research, please cite our paper:
 
 ```bibtex
-@article{nie2026wordvoice,
-  title={WordVoice: Explicit and Decoupled Multi-Dimensional Word-Level Control for LLM-Based TTS},
-  author={Sihang, Nie and Jinxin, Ji and Xiaofen, Xing and Deyi, Tuo and Chengbin, Jin and Jialong, Mai and Xiangmin, Xu},
-  journal={arXiv preprint arXiv:2607.},
-  year={2026}
+@misc{nie2026wordvoice,
+      title={WordVoice: Explicit and Decoupled Multi-Dimensional Word-Level Control for LLM-Based TTS}, 
+      author={Sihang Nie and Jinxin Ji and Xiaofen Xing and Deyi Tuo and Chengbin Jin and Jialong Mai and Xiangmin Xu},
+      year={2026},
+      eprint={2607.06461},
+      archivePrefix={arXiv},
+      primaryClass={eess.AS},
+      url={https://arxiv.org/abs/2607.06461}, 
 }
 ```
 
