@@ -43,8 +43,8 @@ def download_wordvoice_model():
     print(f"模型 '{repo_id}' 已成功下载到 '{local_path}' 目录下。")
 
 def main():
-    # download_mms_fa_model()
-    # download_cosyvoice3_model()
+    download_mms_fa_model()
+    download_cosyvoice3_model()
     download_wordvoice_model()
 
 if __name__ == "__main__":
