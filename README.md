@@ -1,4 +1,4 @@
-# WordVoice Model 🚀
+# 🚀 WordVoice: Explicit and Decoupled Multi-Dimensional Word-Level Control for LLM-Based TTS
 
 <div align="center">
 
