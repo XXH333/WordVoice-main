@@ -10,7 +10,7 @@
 [![Hugging Face Space](https://img.shields.io/badge/🤗%20Hugging%20Face-Space-ffcc4d.svg)](https://huggingface.co/spaces/XXH333/wordvoice-tts)
 [![Python](https://img.shields.io/badge/Python-3.10-blue.svg)](https://www.python.org/)
 
-![WordVoice Logo](./pic/wordvoice.png)
+![WordVoice Logo](./assert/wordvoice.png)
 **Official WordVoice Implementation: Explicit and Decoupled Multi-Dimensional Word-Level Control TTS Built on CosyVoice3**
 
 <br>
