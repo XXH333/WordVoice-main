@@ -8,14 +8,11 @@ Attributes controlled: Duration, Energy, Pitch, Boundary, and Tone.
 import sys
 import os
 import re
-import math
 import time
 import json
 import logging
-import tempfile
 import torch
 import torchaudio
-import torchaudio.functional as F
 
 # 动态添加依赖路径
 sys.path.append('CosyVoice/third_party/Matcha-TTS')
