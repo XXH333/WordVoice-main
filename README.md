@@ -42,7 +42,7 @@
 
 # <span id="cn-zh">🇨🇳 中文说明</span>
 
-## 📖 简介 (Overview)
+## 📖 简介
 
 **WordVoice** 是一个突破现有 LLM-TTS 粗粒度控制瓶颈的全新语音生成框架。它将传统的“隐式端到端生成”转化为“显式、高可控”的生成范式，特别适用于需要精准情感表达和严格时间对齐的场景（如：有声书演绎、视频配音等）。
 
@@ -50,9 +50,9 @@
 
 ---
 
-## ✨ 核心特性 (Features)
+## ✨ 核心特性
 
-### 🎯 显式字级多维控制 (Explicit Word-Level Control)
+### 🎯 显式字级多维控制
 支持对每个输入字的五个声学属性进行独立、解耦的控制：
 - ⏱️ **时长 (Duration)**：字级发音时长
 - ⏸️ **边界 (Boundary)**：五级停顿分类（`b0`–`b4`）
@@ -60,19 +60,19 @@
 - 🎵 **音高 (Pitch)**：字级核心基频高低（`-1`–`1`）
 - 📈 **音调 (Tone)**：七大类韵律形态（平、升、强升、降、强降、峰、谷）
 
-### 🧠 “声学思考”机制 (Acoustic Thinking via Bound-Token)
+### 🧠 “声学思考”机制
 在自回归（AR）语言模型中采用 `bound-token` ($\langle b \rangle$) 机制。模型在生成某个字对应的语音 token 前，会先显式预测该字的声学属性，实现“先规划韵律，再生成声音”的思考过程。
 
-### 🎛️ 细粒度声学调制 (Fine-Grained Acoustic Modulation)
+### 🎛️ 细粒度声学调制
 在 Flow Matching (FM) 阶段，引入基于 LLM 的字级风格 token 上采样与细粒度条件调制模块，弥补了离散 token 带来的声学细节丢失，确保了极高的波形重建保真度与控制精度。
 
-### 🔄 双模式推理 (Dual Inference Modes)
-- **自由模式 (Free Mode)**：由 LLM 自动进行多任务韵律规划，生成自然流畅的零样本 (Zero-shot) 语音。
-- **控制模式 (Control Mode)**：用户可手动介入，直接指定某个特定字的声学属性（如：强制拉长某个字、提高音调等），实现高度确定性的风格干预。
+### 🔄 双模式推理
+- **自由模式**：由 LLM 自动进行多任务韵律规划，生成自然流畅的零样本 (Zero-shot) 语音。
+- **控制模式**：用户可手动介入，直接指定某个特定字的声学属性（如：强制拉长某个字、提高音调等），实现高度确定性的风格干预。
 
 ---
 
-## 🛠️ 安装指南 (Installation)
+## 🛠️ 安装指南
 
 我们推荐使用 **Conda** 来管理 Python 环境。
 
@@ -102,7 +102,7 @@ pip install -e . -i https://mirrors.aliyun.com/pypi/simple/ --trusted-host=mirro
 pip install num2words==0.5.14 x_transformers==2.11.24
 ```
 
-## 📥 下载预训练模型 (Download Models)
+## 📥 下载预训练模型
 运行以下脚本，自动下载 [WordVoice 预训练模型权重](https://huggingface.co/XXH333/WordVoice-base-0.5B)及相关依赖模型（如 CosyVoice3、MMS-FA 等）：
 ```bash
 bash download_models.sh
@@ -110,7 +110,7 @@ bash download_models.sh
 *运行完 `download_models.sh` 脚本后，WordVoice 的预训练模型权重及相关依赖项（如 LLM 基座、Flow Matching 权重等）将默认下载并保存在项目根目录下的 `checkpoints/` 文件夹中。在进行后续的推理或训练时，代码默认会从该路径加载模型。
 
 
-## 🚀 推理示例 (Inference)
+## 🚀 推理示例
 
 我们提供了一个开箱即用的推理脚本。您可以直接运行以下命令来体验 WordVoice 的**自由模式**与**控制模式**：
 
@@ -121,7 +121,7 @@ python wordvoice_infer.py
 
 ---
 
-## 🏋️ 模型训练 (Training)
+## 🏋️ 模型训练
 
 如果您希望在自己的数据集上微调或从头训练 WordVoice，我们提供了完整的训练脚本。
 
@@ -133,7 +133,7 @@ bash train_code/wordvoice/run_wordvoice.sh
 
 ---
 
-## 📚 支持语言 (Supported Languages)
+## 📚 支持语言
 
 | 语言 | 状态 |
 |-----------|--------|
@@ -142,7 +142,7 @@ bash train_code/wordvoice/run_wordvoice.sh
 
 ---
 
-## 📝 引用 (Citation)
+## 📝 引用
 
 如果您在研究中使用了本项目的代码或模型，请引用我们的论文：
 
@@ -161,7 +161,7 @@ bash train_code/wordvoice/run_wordvoice.sh
 ---
 
 
-## 🙏 致谢 (Acknowledgements)
+## 🙏 致谢
 
 WordVoice 模型的实现建立在众多优秀的开源项目之上，特别感谢：
 - [CosyVoice3](https://github.com/FunAudioLLM/CosyVoice) / [Qwen2.5](https://github.com/QwenLM/Qwen2.5) 提供的强大基座支持。
@@ -169,13 +169,13 @@ WordVoice 模型的实现建立在众多优秀的开源项目之上，特别感�
 
 ---
 
-## 💬 联系我们 (Contact)
+## 💬 联系我们
 
 如有任何问题、Bug 报告或合作意向，欢迎提交 Issue 或 Pull Request。
 
 ---
 
-## 📄 开源许可证（License）
+## 📄 开源许可证
 
 本项目包含三个独立授权的组成部分：
 
