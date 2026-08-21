@@ -23,7 +23,7 @@
 >
 > **2026/07/08**
 > - 🎉 **WordVoice** is officially open-sourced! The [paper](https://arxiv.org/abs/2607.06461) is now available on **arXiv**.
-> - 🚀 We have officially released the **WordVoice** model implementation, the **WordVoice-5A** dataset, and the corresponding **WordVoice-5A Pipeline**, fully open-sourcing the training and data-processing workflow.
+> - 🚀 We have officially released the **[WordVoice](https://github.com/XXH333/WordVoice-main)** model implementation, the **[WordVoice-5A](https://huggingface.co/datasets/XXH333/WordVoice-5A)** dataset, and the corresponding **[WordVoice-5A Pipeline](https://github.com/XXH333/WordVoice-5A-Pipeline)**, fully open-sourcing the training and data-processing workflow.
 
 
 
